@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase - User Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">🛍️ ShopEase</a>
+      <div class="nav-links">
+        <a href="cart.html" class="nav-link-item">🛒 Cart <span class="badge cart-count-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="display: flex; gap: 30px; margin-top: 30px;">
+    <!-- Sidebar Menu -->
+    <aside style="width: 220px;" class="panel">
+      <ul style="list-style: none; font-size: 14px; line-height: 2.5;">
+        <li><a href="#" style="font-weight: bold; color: var(--primary);">📊 Dashboard</a></li>
+        <li><a href="#">📦 My Orders</a></li>
+        <li><a href="#">🤍 Wishlist</a></li>
+        <li><a href="#">👤 Profile Info</a></li>
+        <li><a href="index.html" style="color: #ef4444;">🚪 Logout</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <section style="flex: 1;">
+      <div class="panel" style="margin-bottom: 20px;">
+        <h2>Welcome back, Mahi! 👋</h2>
+        <p style="color: var(--text-muted); font-size: 14px;">Here's what's happening with your account today.</p>
+
+        <!-- Stats -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
+          <div style="background: var(--bg-light); padding: 15px; border-radius: 8px;">
+            <small>Orders</small>
+            <div style="font-size: 22px; font-weight: bold;">12</div>
+          </div>
+          <div style="background: var(--bg-light); padding: 15px; border-radius: 8px;">
+            <small>Wishlist</small>
+            <div style="font-size: 22px; font-weight: bold;">18</div>
+          </div>
+          <div style="background: var(--bg-light); padding: 15px; border-radius: 8px;">
+            <small>Reward Points</small>
+            <div style="font-size: 22px; font-weight: bold; color: var(--primary);">250</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Orders Table -->
+      <div class="panel">
+        <h3>Recent Orders</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px;">
+          <thead>
+            <tr style="text-align: left; border-bottom: 1px solid var(--border-color);">
+              <th style="padding-bottom: 10px;">Order ID</th>
+              <th>Date</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-color);">
+              <td style="padding: 12px 0;">#SE123456789</td>
+              <td>May 18, 2026</td>
+              <td>$319.97</td>
+              <td><span style="background: #d1fae5; color: var(--success); font-size: 12px; padding: 2px 8px; border-radius: 10px;">Delivered</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 0;">#SE987654321</td>
+              <td>May 10, 2026</td>
+              <td>$159.99</td>
+              <td><span style="background: #e0e7ff; color: var(--primary); font-size: 12px; padding: 2px 8px; border-radius: 10px;">Shipped</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase - Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Nav -->
+  <header class="top-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">🛍️ ShopEase</a>
+      <div class="search-bar"><input type="text" placeholder="Search products..."><button>🔍</button></div>
+      <div class="nav-links">
+        <a href="cart.html" class="nav-link-item">🛒 Cart <span class="badge cart-count-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="display: flex; gap: 30px; margin-top: 30px;">
+    <!-- Sidebar Filters -->
+    <aside style="width: 240px; flex-shrink: 0;" class="panel">
+      <h3>Categories</h3>
+      <ul style="list-style: none; margin: 15px 0; font-size: 14px; line-height: 2;">
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Electronics</a></li>
+      </ul>
+
+      <hr style="border: none; border-top: 1px solid var(--border-color); margin: 20px 0;">
+
+      <h3>Price Range</h3>
+      <input type="range" min="10" max="500" style="width: 100%; margin: 10px 0;">
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted);">
+        <span>$10</span><span>$500</span>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid var(--border-color); margin: 20px 0;">
+
+      <h3>Brands</h3>
+      <div style="font-size: 14px; display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+        <label><input type="checkbox" checked> Nike</label>
+        <label><input type="checkbox"> Adidas</label>
+        <label><input type="checkbox"> Puma</label>
+      </div>
+    </aside>
+
+    <!-- Main Listing Area -->
+    <section style="flex: 1;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>All Products <small style="font-size: 14px; color: var(--text-muted);">(Showing 1–12 of 1200 products)</small></h2>
+        <select style="padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+          <option>Sort by: Popularity</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <span class="discount-badge">-18%</span>
+          <a href="detail.html"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" class="product-img" alt="Nike Air Max 270"></a>
+          <div class="product-title"><a href="detail.html">Nike Air Max 270</a></div>
+          <div class="rating">★★★★☆ (4.7)</div>
+          <div class="product-price">$129.99 <span class="old-price">$160.00</span></div>
+        </div>
+
+        <div class="product-card">
+          <span class="discount-badge">-20%</span>
+          <a href="detail.html"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" class="product-img" alt="Watch"></a>
+          <div class="product-title"><a href="detail.html">Fossil Chronograph Watch</a></div>
+          <div class="rating">★★★★★ (4.8)</div>
+          <div class="product-price">$159.99 <span class="old-price">$200.00</span></div>
+        </div>
+
+        <div class="product-card">
+          <span class="discount-badge">-30%</span>
+          <a href="detail.html"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300" class="product-img" alt="Handbag"></a>
+          <div class="product-title"><a href="detail.html">Lavie Women's Handbag</a></div>
+          <div class="rating">★★★★☆ (4.5)</div>
+          <div class="product-price">$49.99 <span class="old-price">$80.00</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

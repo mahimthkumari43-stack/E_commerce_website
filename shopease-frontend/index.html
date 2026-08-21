@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">🛍️ ShopEase</a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for products, brands and more...">
+        <button>🔍</button>
+      </div>
+      <div class="nav-links">
+        <a href="dashboard.html" class="nav-link-item">🤍 Wishlist</a>
+        <a href="cart.html" class="nav-link-item">🛒 Cart <span class="badge cart-count-badge">0</span></a>
+        <a href="auth.html" class="nav-link-item">👤 Account</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub Navigation -->
+  <div class="sub-header">
+    <div class="container sub-header-wrapper">
+      <a href="listing.html" class="categories-btn">≡ Categories ➔</a>
+      <a href="index.html">Home</a>
+      <a href="listing.html">Shop</a>
+      <a href="#">Deals</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">New Arrivals</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-text">
+        <span style="color: var(--primary); font-weight: bold; font-size: 13px;">SUMMER COLLECTION</span>
+        <h1>Discover Your<br>Perfect Style</h1>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">Trendy, comfortable & affordable styles for every occasion.</p>
+        <a href="listing.html" class="btn btn-primary">Shop Now ➔</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400" alt="Banner Image" style="border-radius: 12px; height: 260px;">
+    </div>
+
+    <!-- Feature Strip -->
+    <div class="feature-strip">
+      <div class="feature-box">🚚 <div><strong>Free Shipping</strong><br><small>On orders over $50</small></div></div>
+      <div class="feature-box">🔄 <div><strong>Easy Returns</strong><br><small>30 days return policy</small></div></div>
+      <div class="feature-box">🔒 <div><strong>Secure Payment</strong><br><small>100% secure payment</small></div></div>
+      <div class="feature-box">🎧 <div><strong>24/7 Support</strong><br><small>Dedicated support</small></div></div>
+    </div>
+
+    <!-- Featured Products -->
+    <h2 style="margin-top: 40px;">Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <span class="discount-badge">-18%</span>
+        <a href="detail.html"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" class="product-img" alt="Nike Air Max 270"></a>
+        <div class="product-title"><a href="detail.html">Nike Air Max 270</a></div>
+        <div class="rating">★★★★☆ (4.7)</div>
+        <div class="product-price">$129.99 <span class="old-price">$160.00</span></div>
+      </div>
+      <div class="product-card">
+        <span class="discount-badge">-20%</span>
+        <a href="detail.html"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" class="product-img" alt="Watch"></a>
+        <div class="product-title"><a href="detail.html">Fossil Chronograph Watch</a></div>
+        <div class="rating">★★★★★ (4.8)</div>
+        <div class="product-price">$159.99 <span class="old-price">$200.00</span></div>
+      </div>
+      <div class="product-card">
+        <span class="discount-badge">-30%</span>
+        <a href="detail.html"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300" class="product-img" alt="Handbag"></a>
+        <div class="product-title"><a href="detail.html">Lavie Women's Handbag</a></div>
+        <div class="rating">★★★★☆ (4.5)</div>
+        <div class="product-price">$49.99 <span class="old-price">$80.00</span></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

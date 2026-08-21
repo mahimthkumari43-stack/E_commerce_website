@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEase - Product Detail</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery { display: flex; gap: 20px; }
+    .thumbnails { display: flex; flex-direction: column; gap: 10px; }
+    .thumbnails img { width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 1px solid var(--border-color); }
+    .main-img { width: 400px; height: 400px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border-color); }
+    .option-btn { border: 1px solid var(--border-color); padding: 8px 14px; border-radius: 6px; cursor: pointer; background: #fff; }
+    .option-btn.selected { border-color: var(--primary); color: var(--primary); font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">🛍️ ShopEase</a>
+      <div class="nav-links">
+        <a href="cart.html" class="nav-link-item">🛒 Cart <span class="badge cart-count-badge">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 30px;">
+    <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+      Home > Shoes > Men > Nike Air Max 270
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <!-- Product Gallery -->
+      <div class="gallery">
+        <div class="thumbnails">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100" alt="Thumb">
+          <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=100" alt="Thumb">
+        </div>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" class="main-img" alt="Nike Air Max 270">
+      </div>
+
+      <!-- Product Info -->
+      <div>
+        <h1 style="font-size: 28px;">Nike Air Max 270 Men's Shoes</h1>
+        <div class="rating" style="margin: 8px 0;">★★★★☆ 4.7 <span style="color: var(--text-muted);">(128 reviews)</span></div>
+        
+        <div style="font-size: 28px; font-weight: 800; color: var(--text-dark); margin: 15px 0;">
+          $129.99 <span style="font-size: 16px; text-decoration: line-through; color: var(--text-muted);">$160.00</span>
+          <span style="background: #fee2e2; color: #ef4444; font-size: 12px; padding: 4px 8px; border-radius: 4px; vertical-align: middle;">-19%</span>
+        </div>
+
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+          The Nike Air Max 270 delivers all-day comfort with style. Featuring Max Air unit for unbeatable cushioning.
+        </p>
+
+        <!-- Options -->
+        <div style="margin-bottom: 20px;">
+          <label style="font-weight: 600; display: block; margin-bottom: 8px;">Size</label>
+          <div style="display: flex; gap: 8px;">
+            <button class="option-btn">7</button>
+            <button class="option-btn">8</button>
+            <button class="option-btn selected">9</button>
+            <button class="option-btn">10</button>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 15px; margin-top: 30px;">
+          <button id="addCartBtn" class="btn btn-outline" style="flex: 1;">Add to Cart</button>
+          <a href="checkout.html" class="btn btn-primary" style="flex: 1;">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('addCartBtn').addEventListener('click', () => {
+      ShopApp.addToCart({
+        id: 1,
+        name: "Nike Air Max 270",
+        price: 129.99,
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+        quantity: 1,
+        variant: "Men's Shoes - Size 9"
+      });
+    });
+  </script>
+</body>
+</html>
